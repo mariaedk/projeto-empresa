@@ -1,4 +1,4 @@
 LANDING PAGE
 
-* Arrumar responsividade (media screen, fazer imagens menores da landing page, arrumar medidas)
-* Arrumar texto 
+* Arrumar texto e sua responsividade
+
