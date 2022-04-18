@@ -1,0 +1,42 @@
+.banner
+{
+    background-image: url('../../../assets/_img/sincerely-media-UMyt7_RrKpY-unsplash.jpg');
+    min-height: 90vh;
+    background-position: center top;
+    background-size: cover;
+    display: flex;
+}
+
+.img-landing
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.img-landing img
+{
+    width: 800px;
+    height: 440px;
+}
+
+.info-landing
+{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.texto-landing p
+{
+    font-size: 18px;
+}
+
+@media screen and (max-width: 1200px)
+{
+    .banner
+    {
+        display: grid;
+    }
+}

@@ -1,25 +1,21 @@
+
 .bg-custom
 {
-    background-color: rgba(255, 255, 255, 0);
+  background-color: #98D1E2;
 }
 
-.navbar-light a
+.nav-item .nav-link 
 {
   color: black;
-}
-
-.navbar-light a:hover
-{
-  color: var(--cor2);
-  transition: .5s;
-}
-
-.navbar-brand
-{
-  font-size: 30px;
-}
-
-.nav-item
-{
   font-size: 18px;
+  margin: 20px;
+  padding: 7px 17px 7px 17px;
+  border-radius: 12px;
+}
+
+.nav-item .nav-link:hover
+{
+  color: white;
+  background-color: black;
+  transition: .5s;
 }
