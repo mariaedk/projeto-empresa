@@ -1,12 +1,7 @@
 
-.bg-custom
-{
-  background-color: #98D1E2;
-}
-
 .nav-item .nav-link 
 {
-  color: black;
+  color: var(--cor7);
   font-size: 18px;
   margin: 20px;
   padding: 7px 17px 7px 17px;
@@ -15,7 +10,7 @@
 
 .nav-item .nav-link:hover
 {
-  color: white;
-  background-color: black;
+  color: var(--cor6);
+  background-color: var(--cor7);
   transition: .5s;
 }

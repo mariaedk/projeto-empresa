@@ -1,13 +1,13 @@
 .landing
 {
-    background-image: url('../../../assets/_img/bg-landing.jpg');
+    background-image: url('../../../assets/_img/bg/automation/img-xg.jpg');
     min-height: 90vh;
     background-position: center top;
     background-size: cover;
     display: flex;
 }
 
-.secao-img-landing
+.info-landing
 {
     display: flex;
     align-items: center;
@@ -15,50 +15,36 @@
     width: 50%;
 }
 
-.img-landing
+.texto-landing
 {
-    background-image: url('../../../assets/_img/maquinario-landing/img-g.png');
-    width: 1000px;
-    height: 551px;
+    width: 80%;
+    padding: 20px 20px 20px 30px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.479);
 }
 
-.info-landing
+.texto-landing h2
 {
-    display: flex;
-    align-items: center;
-    width: 50%;
+    font-weight: 600;
 }
 
 .texto-landing p
 {
     font-size: 18px;
+    font-weight: 400;
 }
 
-@media screen and (max-width: 1800px)
+@media screen and (max-width: 700px) 
 {
-    .img-landing
+    .landing
     {
-        background-image: url('../../../assets/_img/maquinario-landing/img-m.png');
-        width: 700px;
-        height: 386px;
+        background-image: url('../../../assets/_img/bg/automation/img-p.jpg');
     }
-}
+    .info-landing
+    {
+        width: 100%;
+        align-items: flex-end;
+        margin-bottom: 30px;
+    }
 
-@media screen and (max-width: 1300px)
-{
-    .img-landing
-    {
-        background-image: url('../../../assets/_img/maquinario-landing/img-p.png');
-        width: 500px;
-        height: 275px;
-    }
-}
-
-@media screen and (max-width: 890px)
-{
-    .img-landing
-    {
-        background-image: none;
-    }
-    // TODO: arrumar o posicionamento do texto
 }
