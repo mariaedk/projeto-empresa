@@ -43,8 +43,8 @@
 
 .info-empresa
 {
-    margin-top: 10rem;
-    margin-bottom: 10rem;
+    margin-top: 15rem;
+    margin-bottom: 15rem;
 }
 
 .img-info
@@ -60,7 +60,26 @@
     font-size: 20px;
     align-items: center;
     width: 50%;
+    background-color: #87e45938;
+    padding: 10px 20px 10px 20px;
 }
+
+#carouselExampleCaptions
+{
+    width: 60%;
+}
+
+.texto-topico
+{
+    font-weight: 700;
+}
+
+.custom
+{
+    background-color: rgba(0, 0, 0, 0.562);
+}
+
+
 
 @media screen and (max-width: 700px) 
 {
@@ -86,6 +105,16 @@
         height: 275px;
     }
 
+    #carouselExampleCaptions
+    {
+        width: 100%;
+    }
+
+    .info-empresa
+    {
+        margin-top: 7rem;
+        margin-bottom: 7rem;   
+    }
 }
 
 @media screen and (max-width: 500px) 
