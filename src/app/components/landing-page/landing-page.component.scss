@@ -56,13 +56,20 @@
 
 .texto-info
 {
-    display: flex;
+    display: grid;
     font-size: 20px;
     align-items: center;
     width: 50%;
-    background-color: #87e45938;
-    padding: 10px 20px 10px 20px;
+    background-color: #73d8f436;
+    padding: 20px 20px 20px 20px;
+    border-radius: 15px;
 }
+
+.btn-custom
+{
+    width: 30%;
+}
+
 
 #carouselExampleCaptions
 {
@@ -77,6 +84,14 @@
 .custom
 {
     background-color: rgba(0, 0, 0, 0.562);
+}
+
+
+
+.link
+{
+    text-decoration: none;
+    color: var(--cor8);
 }
 
 

@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/common/navbar/navbar.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { FooterComponent } from './components/common/footer/footer.component';
+import { SobreComponent } from './components/sobre/sobre.component';
+import { ContatoComponent } from './components/contato/contato.component';
+import { ServicoComponent } from './components/servico/servico.component';
 
 
 @NgModule({
@@ -13,7 +16,10 @@ import { FooterComponent } from './components/common/footer/footer.component';
     AppComponent,
     NavbarComponent,
     LandingPageComponent,
-    FooterComponent
+    FooterComponent,
+    SobreComponent,
+    ContatoComponent,
+    ServicoComponent
   ],
   imports: [
     BrowserModule,
