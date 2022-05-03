@@ -2,3 +2,20 @@
 {
     color: var(--cor7)
 }
+
+#logo-empresa
+{
+  background-image: url('../../../../assets/_img/logo/invertec5.png');
+  height: 152px;
+  width: 300px;
+}
+
+@media screen and (max-width: 600px)
+{
+  #logo-empresa
+  {
+    background-image: url('../../../../assets/_img/logo/invertec3.png');
+    height: 96px;
+    width: 190px;
+  }
+}
