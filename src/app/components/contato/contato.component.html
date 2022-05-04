@@ -9,11 +9,96 @@
         </div>
     </section>
     <div class="three">
-      <h1>Contato</h1>
+      <h1>Informações de contato</h1>
     </div>
-    <section class="contact">
+
+    <section class="mt-5 mb-5">
       <address>
-        <!-- TODO: FORM DE CONTATO + INFO DE LOCALIZAÇÃO -->
+        <div class="telefone-contato">
+          <h4>Telefone:</h4>
+          <p>47 3234-0140</p>
+        </div>
+        <div class="celular-contato">
+          <h4>Celular:</h4>
+          <p>47 9628-2991</p>
+        </div>
+        <div class="email-contato">
+          <h4>E-mail:</h4>
+          <p><a href="mailto:contato@invertec.com.br">contato@invertec.com.br</a></p>
+        </div>
+        <div class="endereco-contato">
+          <h4>Endereço:</h4>
+          <p>Rua Fritz Spernau, 457 <br>
+            Fortaleza, Blumenau - SC <br>
+            CEP 89055-200
+          </p>
+        </div>
       </address>
     </section>
+
+    <div class="three">
+      <h1>Fale conosco!</h1>
+    </div>
+    <!-- TODO: Fazer o botão de enviar do formulário e pesquisar sobre formular email com essas info -->
+    <section class="mt-5 mb-5">
+      <form class="col-10 needs-validation" novalidate>
+        <div class="col-md-6 mb-3">
+          <label for="validationCustom01" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="validationCustom01" placeholder="Insira seu nome" required>
+          <div class="valid-feedback">
+            &#9745;
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="validationCustom03" class="form-label">Cidade</label>
+          <input type="text" class="form-control" id="validationCustom03" required>
+          <div class="invalid-feedback">
+            Por favor, informe uma cidade válida.
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="validationCustom04" class="form-label">Estado</label>
+          <select class="form-select" id="validationCustom04" required>
+            <option selected disabled value="">Escolha...</option>
+            <option>...</option>
+          </select>
+          <div class="invalid-feedback">
+            Por favor, selecione um estado válido.
+          </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+          <label for="validationCustom04" class="form-label">Interesse</label>
+          <select class="form-select" id="validationCustom04" required>
+            <option selected value="1">Consumidor</option>
+            <option value="2">Representante</option>
+            <option value="3">Cliente</option>
+            <option value="4">Outros</option>
+          </select>
+          <div class="invalid-feedback">
+            Por favor, selecione um estado válido.
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <label for="validationCustom03" class="form-label">Telefone</label>
+          <input type="text" class="form-control" id="validationCustom03" required>
+          <div class="invalid-feedback">
+            Por favor, informe um número de telefone válido.
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="exampleInputEmail1" class="form-label">Email</label>
+          <input type="email" class="form-control" id="exampleInputEmail1">
+        </div>
+        <div class="input-group">
+          <span class="input-group-text">Mensagem</span>
+          <textarea class="form-control" aria-label="With textarea"></textarea>
+        </div>
+        <div class="col-12 mt-5 d-flex justify-content-end">
+          <button class="btn btn-primary" type="submit">Enviar formulário</button>
+        </div>
+      </form>
+    </section>
+
 </div>
