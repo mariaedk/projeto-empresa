@@ -78,6 +78,11 @@ h1 em {
   background-color: #333;
 }
 
+.custom-height
+{
+  min-height: 70vh;
+}
+
 #sobre-nos-container
 {
   display: flex;
@@ -86,11 +91,55 @@ h1 em {
 .texto-sobre-nos
 {
   width: 50%;
+  padding: 0 30px 0 30px;
 }
 
 .img-sobre-nos
 {
   background-image: url('../../../assets/_img/empresa/empresa1.png');
-  width: 1389px;
-  height: 769px;
+  width: 800px;
+  height: 443px;
+}
+
+@media screen and (max-width: 1250px)
+{
+  #sobre-nos-container
+  {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  .texto-sobre-nos
+  {
+    padding: 30px;
+    width: 100%;
+  }
+  .img-sobre-nos
+  {
+    margin: 30px;
+  }
+}
+
+
+@media screen and (max-width: 1000px)
+{
+
+  .img-sobre-nos
+  {
+    background-image: url('../../../assets/_img/empresa/empresa3.png');
+    width: 500px;
+    height: 227px;
+  }
+
+}
+
+
+@media screen and (max-width: 600px)
+{
+  .img-sobre-nos
+  {
+      background-image: url('../../../assets/_img/empresa/empresa2.png');
+      width: 350px;
+      height: 194px;
+  }
 }
