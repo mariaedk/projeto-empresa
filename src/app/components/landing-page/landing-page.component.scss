@@ -67,7 +67,7 @@
 
 .btn-custom
 {
-    width: 30%;
+  width: 30%;
 }
 
 
@@ -96,7 +96,7 @@
 
 
 
-@media screen and (max-width: 700px) 
+@media screen and (max-width: 700px)
 {
     .landing
     {
@@ -128,16 +128,20 @@
     .info-empresa
     {
         margin-top: 7rem;
-        margin-bottom: 7rem;   
+        margin-bottom: 7rem;
     }
 }
 
-@media screen and (max-width: 500px) 
+@media screen and (max-width: 500px)
 {
     .img-info
     {
         background-image: url('../../../assets/_img/maquinario/img-pp.png');
         width: 300px;
         height: 165px;
+    }
+    .btn-custom
+    {
+      width: 70%;
     }
 }
