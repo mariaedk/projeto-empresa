@@ -10,6 +10,9 @@
 <!-- TAB BAR -->
 <div class="tab-bar">
   <div class="container">
+    <a class="tab-logo" routerLink="/" [class.tab-logo-visible]="isScrolled" title="Ir para home">
+      <img src="assets/_img/logo/invertec.png" alt="INVERTEC" height="34">
+    </a>
     <button class="tab-btn" [class.active]="activeTab === 'automacao'" (click)="switchTab('automacao')">
       Automação Industrial
     </button>

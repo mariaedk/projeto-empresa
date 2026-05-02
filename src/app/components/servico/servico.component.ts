@@ -8,6 +8,12 @@ import { Component, HostListener } from '@angular/core';
 export class ServicoComponent {
   activeTab: 'automacao' | 'servicos' = 'automacao';
   zoomedImg: string | null = null;
+  isScrolled = false;
+
+  @HostListener('window:scroll')
+  onScroll(): void {
+    this.isScrolled = window.scrollY > 260;
+  }
 
   switchTab(tab: 'automacao' | 'servicos'): void {
     this.activeTab = tab;

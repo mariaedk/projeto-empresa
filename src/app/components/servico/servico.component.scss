@@ -27,6 +27,28 @@
   }
 }
 
+.tab-logo
+{
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  max-width: 0;
+  opacity: 0;
+  pointer-events: none;
+  flex-shrink: 0;
+  transition: max-width 0.4s ease, opacity 0.3s ease;
+
+  img { display: block; height: 34px; width: auto; flex-shrink: 0; }
+
+  &.tab-logo-visible
+  {
+    max-width: 160px;
+    opacity: 1;
+    pointer-events: auto;
+    padding-right: 0.75rem;
+  }
+}
+
 .tab-btn
 {
   flex: 1;

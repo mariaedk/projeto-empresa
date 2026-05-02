@@ -28,7 +28,8 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              { "glob": ".nojekyll", "input": "src/", "output": "/" }
             ],
             "styles": [
               "src/styles.scss"
