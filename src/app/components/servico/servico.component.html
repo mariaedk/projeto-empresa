@@ -1,47 +1,409 @@
-<div class="container">
-  <div class="accordion" id="accordionExample">
-    <div class="card">
-      <div class="card-header" id="headingOne">
-        <h2 class="mb-0">
-          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Collapsible Group Item #1
-          </button>
-        </h2>
-      </div>
+<section class="servicos-hero">
+  <div class="container">
+    <h1>Nossos Serviços</h1>
+    <p class="text-normal subtitulo">
+      Soluções completas em automação industrial e eletroeletrônica para a sua indústria.
+    </p>
+  </div>
+</section>
 
-      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-        <div class="card-body">
-          Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the <code>.show</code> class.
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header" id="headingTwo">
-        <h2 class="mb-0">
-          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            Collapsible Group Item #2
-          </button>
-        </h2>
-      </div>
-      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-        <div class="card-body">
-          Some placeholder content for the second accordion panel. This panel is hidden by default.
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header" id="headingThree">
-        <h2 class="mb-0">
-          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            Collapsible Group Item #3
-          </button>
-        </h2>
-      </div>
-      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-        <div class="card-body">
-          And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
-        </div>
-      </div>
-    </div>
+<!-- TAB BAR -->
+<div class="tab-bar">
+  <div class="container">
+    <button class="tab-btn" [class.active]="activeTab === 'automacao'" (click)="switchTab('automacao')">
+      Automação Industrial
+    </button>
+    <button class="tab-btn" [class.active]="activeTab === 'servicos'" (click)="switchTab('servicos')">
+      Projetos e Manutenção
+    </button>
   </div>
 </div>
+
+<!-- ═══════════ TAB: AUTOMAÇÃO INDUSTRIAL ═══════════ -->
+<ng-container *ngIf="activeTab === 'automacao'">
+
+  <nav class="servicos-nav">
+    <div class="container">
+      <a (click)="scrollTo('clps')">CLPs</a>
+      <a (click)="scrollTo('ihms')">IHMs</a>
+      <a (click)="scrollTo('scada')">Supervisão / SCADA</a>
+      <a (click)="scrollTo('redes')">Redes Industriais</a>
+      <a (click)="scrollTo('inversores')">Inversores e Servos</a>
+    </div>
+  </nav>
+
+  <section class="servico-intro">
+    <div class="container intro-grid">
+      <div>
+        <p class="text-normal">
+          A INVERTEC busca, em parceria com seus clientes, aplicar as melhores soluções de
+          automação industrial do mercado. Nossa equipe conta com mais de 20 anos de experiência
+          no desenvolvimento de aplicações para CLPs, IHMs, supervisórios e redes industriais.
+        </p>
+        <p class="text-normal">
+          Desenvolvemos e integramos sistemas de diversos fabricantes, com destaque para a
+          <strong>Schneider Electric</strong>, da qual a INVERTEC é <strong>Integrador Alliance</strong>
+          — a mais alta certificação de parceria técnica da marca.
+        </p>
+      </div>
+      <div class="intro-badge">
+        <div class="badge-item">🏆 Integrador Alliance<br><span>Schneider Electric</span></div>
+        <div class="badge-item">👨‍💻 +20 anos<br><span>de experiência</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- A01. CLPs -->
+  <section class="servico-secao" id="clps">
+    <div class="container secao-grid">
+      <div class="secao-texto">
+        <div class="secao-numero">01</div>
+        <h2>Controladores Lógicos Programáveis (CLPs)</h2>
+        <p class="text-normal">
+          Desenvolvemos aplicações nas mais modernas ferramentas de programação,
+          cobrindo os principais fabricantes do mercado industrial:
+        </p>
+        <ul class="features-list">
+          <li>Schneider Electric: Unity, SoMachine, PL7, Atos-A1</li>
+          <li>Rockwell Automation</li>
+          <li>Siemens</li>
+          <li>Eaton (Moeller): Codesys 2.3.9</li>
+          <li>Weg</li>
+          <li>Toshiba</li>
+        </ul>
+      </div>
+      <div class="secao-imagem imagem-grid-3">
+        <img src="../../../assets/_img/automacao/pl7.png" alt="Software PL7" class="zoomable" (click)="zoom('../../../assets/_img/automacao/pl7.png')">
+        <img src="../../../assets/_img/automacao/software-unity.png" alt="Software Unity" class="zoomable" (click)="zoom('../../../assets/_img/automacao/software-unity.png')">
+        <img src="../../../assets/_img/automacao/somachine.png" alt="SoMachine" class="zoomable" (click)="zoom('../../../assets/_img/automacao/somachine.png')">
+      </div>
+    </div>
+  </section>
+
+  <!-- A02. IHMs -->
+  <section class="servico-secao inversa fundo-alt" id="ihms">
+    <div class="container secao-grid">
+      <div class="secao-texto">
+        <div class="secao-numero">02</div>
+        <h2>Interfaces Homem-Máquina (IHMs)</h2>
+        <p class="text-normal">
+          Em complemento às aplicações com CLPs, desenvolvemos interfaces modernas e
+          simplificadas para IHMs, otimizando tempos e métodos em processos e máquinas.
+          Criamos telas intuitivas que facilitam a operação e reduzem erros.
+        </p>
+        <ul class="features-list">
+          <li>Vijeo Designer (Schneider Electric)</li>
+          <li>Interfaces gráficas personalizadas</li>
+          <li>Painéis de operação simplificados</li>
+        </ul>
+      </div>
+      <div class="secao-imagem">
+        <img src="../../../assets/_img/automacao/vijeo_designer.png" alt="Vijeo Designer" class="zoomable" (click)="zoom('../../../assets/_img/automacao/vijeo_designer.png')">
+      </div>
+    </div>
+  </section>
+
+  <!-- A03. SCADA -->
+  <section class="servico-secao" id="scada">
+    <div class="container secao-grid">
+      <div class="secao-texto">
+        <div class="secao-numero">03</div>
+        <h2>Sistemas de Supervisão (SCADA)</h2>
+        <p class="text-normal">
+          Desenvolvemos sistemas de controle e supervisão com geração de relatórios,
+          gráficos de tendência e disponibilização de dados do chão de fábrica para o
+          sistema de gerenciamento empresarial.
+        </p>
+        <p class="text-normal">
+          Além de ferramentas comerciais, desenvolvemos sistemas de supervisão proprietários
+          com excelente custo-benefício para aplicações de pequeno porte, como estações de
+          tratamento de água, laboratórios químicos e sistemas de testes.
+        </p>
+      </div>
+      <div class="secao-imagem imagem-grid-2">
+        <img src="../../../assets/_img/automacao/invertec-2009-160.jpg" alt="Sistema de supervisão INVERTEC" class="zoomable" (click)="zoom('../../../assets/_img/automacao/invertec-2009-160.jpg')">
+        <img src="../../../assets/_img/automacao/sistema_sup.png" alt="Sistema supervisório" class="zoomable" (click)="zoom('../../../assets/_img/automacao/sistema_sup.png')">
+      </div>
+    </div>
+  </section>
+
+  <!-- A04. Redes Industriais -->
+  <section class="servico-secao inversa fundo-alt" id="redes">
+    <div class="container secao-grid">
+      <div class="secao-texto">
+        <div class="secao-numero">04</div>
+        <h2>Redes Industriais</h2>
+        <p class="text-normal">
+          Desenvolvemos projetos utilizando as mais variadas redes industriais — para uso
+          em máquinas ou processos, incluindo integração de múltiplas redes no mesmo sistema.
+          As redes de comunicação reduzem a infraestrutura necessária e melhoram a performance.
+        </p>
+        <ul class="features-list">
+          <li>Modbus TCP e Serial</li>
+          <li>CANopen</li>
+          <li>Profibus e Profinet</li>
+          <li>EtherCAT</li>
+          <li>Unitelway</li>
+        </ul>
+      </div>
+      <div class="secao-imagem">
+        <img src="../../../assets/_img/automacao/redes_recortar.png" alt="Redes industriais" class="zoomable" (click)="zoom('../../../assets/_img/automacao/redes_recortar.png')">
+      </div>
+    </div>
+  </section>
+
+  <!-- A05. Inversores e Servoacionamentos -->
+  <section class="servico-secao" id="inversores">
+    <div class="container secao-grid">
+      <div class="secao-texto">
+        <div class="secao-numero">05</div>
+        <h2>Inversores e Servoacionamentos</h2>
+        <p class="text-normal">
+          A INVERTEC é reconhecida pelo amplo conhecimento em aplicações de soft-starters
+          e inversores de frequência, sempre selecionando o produto correto para a melhor
+          performance do sistema.
+        </p>
+        <p class="text-normal">
+          Desenvolvemos também sistemas com servoacionamentos, atuando no controle de
+          torque, velocidade, posicionamento e interpolações.
+        </p>
+        <ul class="features-list">
+          <li>Inversores de frequência</li>
+          <li>Soft-starters</li>
+          <li>Servoacionamentos: torque, velocidade e posicionamento</li>
+        </ul>
+      </div>
+      <div class="secao-imagem imagem-grid-2">
+        <img src="../../../assets/_img/automacao/foto_inversores.jpg" alt="Inversores de frequência" class="zoomable" (click)="zoom('../../../assets/_img/automacao/foto_inversores.jpg')">
+        <img src="../../../assets/_img/automacao/Soft_starter.jpg" alt="Soft starter" class="zoomable" (click)="zoom('../../../assets/_img/automacao/Soft_starter.jpg')">
+      </div>
+    </div>
+  </section>
+
+</ng-container>
+
+<!-- ═══════════ TAB: SERVIÇOS ═══════════ -->
+<ng-container *ngIf="activeTab === 'servicos'">
+
+  <nav class="servicos-nav">
+    <div class="container">
+      <a (click)="scrollTo('integracao')">Integração</a>
+      <a (click)="scrollTo('montagem')">Montagem de Painéis</a>
+      <a (click)="scrollTo('instalacoes')">Instalações</a>
+      <a (click)="scrollTo('adequacoes')">NR10 / NR12</a>
+      <a (click)="scrollTo('retrofitting')">Retrofitting</a>
+      <a (click)="scrollTo('assistencia')">Assistência Técnica</a>
+      <a (click)="scrollTo('pecas')">Venda de Peças</a>
+    </div>
+  </nav>
+
+  <!-- S01. Integração de Sistemas -->
+  <section class="servico-secao" id="integracao">
+    <div class="container secao-grid">
+      <div class="secao-texto">
+        <div class="secao-numero">01</div>
+        <h2>Integração de Sistemas</h2>
+        <p class="text-normal">
+          Com a crescente competitividade industrial, processos e máquinas precisam de sistemas
+          de controle confiáveis, interligados com sistemas de gerenciamento que gerem qualidade
+          e produtividade no chão de fábrica.
+        </p>
+        <p class="text-normal">
+          A INVERTEC oferece serviços de integração dos mais variados sistemas: supervisórios,
+          CLPs, drives, GPRS e sistemas de gestão de produtividade e qualidade industrial.
+        </p>
+      </div>
+      <div class="secao-imagem">
+        <img src="../../../assets/_img/servicos/integracao.jpg" alt="Integração de sistemas" class="zoomable" (click)="zoom('../../../assets/_img/servicos/integracao.jpg')">
+      </div>
+    </div>
+  </section>
+
+  <!-- S02. Montagem de Painéis -->
+  <section class="servico-secao inversa fundo-alt" id="montagem">
+    <div class="container secao-grid">
+      <div class="secao-texto">
+        <div class="secao-numero">02</div>
+        <h2>Montagem de Painéis</h2>
+        <p class="text-normal">
+          A INVERTEC possui excelente infraestrutura para montagem dos mais modernos painéis
+          elétricos de automação e distribuição elétrica, com mais de 20 anos de atividade
+          neste setor.
+        </p>
+        <p class="text-normal">
+          Atendemos projetos de pequeno e grande porte com rigorosos padrões de qualidade
+          e segurança elétrica.
+        </p>
+      </div>
+      <div class="secao-imagem imagem-grid-2">
+        <img src="../../../assets/_img/servicos/montagem1.jpg" alt="Montagem de painel 1" class="zoomable" (click)="zoom('../../../assets/_img/servicos/montagem1.jpg')">
+        <img src="../../../assets/_img/servicos/montagem2.jpg" alt="Montagem de painel 2" class="zoomable" (click)="zoom('../../../assets/_img/servicos/montagem2.jpg')">
+        <img src="../../../assets/_img/servicos/montagem3.jpg" alt="Montagem de painel 3" class="zoomable" (click)="zoom('../../../assets/_img/servicos/montagem3.jpg')">
+        <img src="../../../assets/_img/servicos/montagem4.jpg" alt="Montagem de painel 4" class="zoomable" (click)="zoom('../../../assets/_img/servicos/montagem4.jpg')">
+      </div>
+    </div>
+  </section>
+
+  <!-- S03. Instalações e Start-up -->
+  <section class="servico-secao" id="instalacoes">
+    <div class="container secao-grid">
+      <div class="secao-texto">
+        <div class="secao-numero">03</div>
+        <h2>Instalações e Start-up</h2>
+        <p class="text-normal">
+          Para maior durabilidade de máquinas e equipamentos, uma instalação dentro das normas
+          técnicas é essencial. A partida ou "start-up" realizada corretamente otimiza
+          produtividade, qualidade e economia.
+        </p>
+        <p class="text-normal">
+          A INVERTEC realiza instalações de painéis, máquinas e equipamentos com equipe
+          especializada e total comprometimento com o resultado.
+        </p>
+      </div>
+      <div class="secao-imagem">
+        <img src="../../../assets/_img/servicos/instalacao.jpg" alt="Instalação e start-up" class="zoomable" (click)="zoom('../../../assets/_img/servicos/instalacao.jpg')">
+      </div>
+    </div>
+  </section>
+
+  <!-- S04. Adequações NR10/NR12 -->
+  <section class="servico-secao inversa fundo-alt" id="adequacoes">
+    <div class="container secao-grid">
+      <div class="secao-texto">
+        <div class="secao-numero">04</div>
+        <h2>Adequações NR10 / NR12</h2>
+        <p class="text-normal">
+          A INVERTEC executa seus projetos em conformidade com as normas de segurança em
+          instalações elétricas (NR10) e segurança de máquinas (NR12).
+        </p>
+        <p class="text-normal">
+          Além de projetos novos, realizamos adequações em máquinas pré-existentes com
+          emissão de ART por engenheiro responsável.
+        </p>
+      </div>
+      <div class="secao-imagem imagem-grid-3">
+        <img src="../../../assets/_img/servicos/adequacao1.jpg" alt="Adequação NR 1" class="zoomable" (click)="zoom('../../../assets/_img/servicos/adequacao1.jpg')">
+        <img src="../../../assets/_img/servicos/adequacao2.jpg" alt="Adequação NR 2" class="zoomable" (click)="zoom('../../../assets/_img/servicos/adequacao2.jpg')">
+        <img src="../../../assets/_img/servicos/adequacao3.jpg" alt="Adequação NR 3" class="zoomable" (click)="zoom('../../../assets/_img/servicos/adequacao3.jpg')">
+      </div>
+    </div>
+  </section>
+
+  <!-- S05. Retrofitting -->
+  <section class="servico-secao" id="retrofitting">
+    <div class="container secao-grid">
+      <div class="secao-texto">
+        <div class="secao-numero">05</div>
+        <h2>Retrofitting</h2>
+        <p class="text-normal">
+          Retrofitting é o processo de modernização de equipamentos ultrapassados ou fora de norma.
+          Atualizamos sistemas de controle e acionamentos aproveitando a estrutura mecânica
+          existente — reduzindo custos e aumentando a eficiência produtiva.
+        </p>
+        <p class="text-normal">
+          O resultado é maior disponibilidade, menor tempo de parada e conformidade com as
+          normas vigentes, com custo significativamente menor que a substituição total.
+        </p>
+      </div>
+      <div class="secao-imagem">
+        <div class="retrofit-pares">
+          <div class="retrofit-par">
+            <div class="retrofit-label">Antes</div>
+            <img src="../../../assets/_img/servicos/retrofit_bob_antes.jpg" alt="Antes do retrofitting" class="zoomable" (click)="zoom('../../../assets/_img/servicos/retrofit_bob_antes.jpg')">
+          </div>
+          <div class="retrofit-par">
+            <div class="retrofit-label depois">Depois</div>
+            <img src="../../../assets/_img/servicos/retrofit_bob_depois.jpg" alt="Depois do retrofitting" class="zoomable" (click)="zoom('../../../assets/_img/servicos/retrofit_bob_depois.jpg')">
+          </div>
+          <div class="retrofit-par">
+            <div class="retrofit-label">Antes</div>
+            <img src="../../../assets/_img/servicos/retrofit_rama_antes.jpg" alt="Antes do retrofitting" class="zoomable" (click)="zoom('../../../assets/_img/servicos/retrofit_rama_antes.jpg')">
+          </div>
+          <div class="retrofit-par">
+            <div class="retrofit-label depois">Depois</div>
+            <img src="../../../assets/_img/servicos/retrofit_rama_depois.jpg" alt="Depois do retrofitting" class="zoomable" (click)="zoom('../../../assets/_img/servicos/retrofit_rama_depois.jpg')">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S06. Assistência Técnica -->
+  <section class="servico-secao inversa fundo-alt" id="assistencia">
+    <div class="container secao-grid">
+      <div class="secao-texto">
+        <div class="secao-numero">06</div>
+        <h2>Assistência Técnica</h2>
+        <p class="text-normal">
+          Contamos com um moderno laboratório de reparos para CLPs, IHMs, inversores, fontes,
+          servoacionamentos e placas dedicadas.
+        </p>
+        <p class="text-normal">
+          Somos assistência técnica autorizada Schneider Electric para produtos de automação,
+          inversores e soft starters. Também realizamos atendimento personalizado em campo
+          para máquinas, processos e equipamentos.
+        </p>
+      </div>
+      <div class="secao-imagem">
+        <img src="../../../assets/_img/servicos/assistencia.jpg" alt="Assistência técnica" class="zoomable" (click)="zoom('../../../assets/_img/servicos/assistencia.jpg')">
+      </div>
+    </div>
+  </section>
+
+  <!-- S07. Venda de Peças -->
+  <section class="servico-secao" id="pecas">
+    <div class="container secao-grid">
+      <div class="secao-texto">
+        <div class="secao-numero">07</div>
+        <h2>Venda de Peças e Componentes</h2>
+        <p class="text-normal">
+          A INVERTEC comercializa peças e componentes de automação industrial das principais
+          marcas do mercado. Nossa equipe técnica auxilia na identificação e seleção dos itens
+          corretos para cada aplicação, garantindo compatibilidade e qualidade.
+        </p>
+        <p class="text-normal">
+          Mantemos em estoque os componentes mais demandados e trabalhamos com fornecedores
+          homologados para atender com agilidade e minimizar o tempo de parada do seu processo.
+        </p>
+        <ul class="features-list">
+          <li>CLPs, IHMs e módulos de expansão</li>
+          <li>Inversores de frequência e soft starters</li>
+          <li>Servoacionamentos e acessórios</li>
+          <li>Fontes de alimentação e baterias</li>
+          <li>Componentes elétricos e de sinalização</li>
+        </ul>
+      </div>
+      <div class="secao-texto-complemento">
+        <div class="pecas-destaque">
+          <div class="pecas-item">
+            <strong>Entrega ágil</strong>
+            <span>Estoque local e parceiros homologados</span>
+          </div>
+          <div class="pecas-item">
+            <strong>Suporte técnico</strong>
+            <span>Identificação e seleção do componente certo</span>
+          </div>
+          <div class="pecas-item">
+            <strong>Marcas líderes</strong>
+            <span>Schneider, Siemens, Weg, Rockwell e mais</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</ng-container>
+
+<!-- LIGHTBOX -->
+<div class="lightbox-overlay" *ngIf="zoomedImg" (click)="closeZoom()">
+  <button class="lightbox-close" (click)="closeZoom()" aria-label="Fechar">✕</button>
+  <img [src]="zoomedImg" class="lightbox-img" (click)="$event.stopPropagation()">
+</div>
+
+<section class="servicos-cta">
+  <div class="container text-center">
+    <h2>Precisa de uma solução personalizada?</h2>
+    <p class="text-normal">Nossa equipe está pronta para desenvolver o projeto ideal para a sua indústria.</p>
+    <a class="btn btn-cta" routerLink="/contato">Fale conosco</a>
+  </div>
+</section>

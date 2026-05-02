@@ -1,22 +1,24 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light navbar-custom">
     <div class="container-fluid">
-      <a class="navbar-brand" routerLink=""><img src="../../../../assets/_img/logo/invertec.png" alt="Logo da Empresa"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" routerLink="" (click)="closeMenu()">
+        <img src="../../../../assets/_img/logo/invertec.png" alt="INVERTEC Automação Industrial" height="50">
+      </a>
+      <button class="navbar-toggler" type="button" (click)="toggleMenu()" aria-label="Menu">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="navbar-collapse" [class.show]="menuOpen" [class.collapse]="!menuOpen">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" routerLink="" routerLinkActive="active-link">Home</a>
+            <a class="nav-link" routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" (click)="closeMenu()">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="servicos" routerLinkActive="active-link">Serviços</a>
+            <a class="nav-link" routerLink="/servicos" routerLinkActive="active-link" (click)="closeMenu()">Serviços</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="sobre" routerLinkActive="active-link">Sobre</a>
+            <a class="nav-link" routerLink="/sobre" routerLinkActive="active-link" (click)="closeMenu()">Sobre</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="contato" routerLinkActive="active-link">Contato</a>
+            <a class="nav-link" routerLink="/contato" routerLinkActive="active-link" (click)="closeMenu()">Contato</a>
           </li>
         </ul>
       </div>

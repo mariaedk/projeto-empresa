@@ -1,71 +1,129 @@
-<section class="landing">
-    <div class="secao-img-landing">
-    </div>
-    <div class="info-landing">
-        <div class="texto-landing">
-            <h1 class="titulo-principal">INVERTEC ® Automação Industrial</h1>
-            <p>Faça da usa empresa uma referência!</p>
-            <button type="button" class="btn btn-info"><a class="link" routerLink="servicos">Conheça nossos serviços</a></button>
-        </div>
-    </div>
-</section>
-
-<section class="row info-empresa d-flex justify-content-center">
-    <h2 class="text-center mb-5 texto-topico">A melhor solução para a sua empresa!</h2>
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="../../../assets/_img/servicos/placa.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption custom d-none d-md-block">
-              <h5>INVERTEC ® Automação Industrial</h5>
-              <p>Assistência técnica altamente qualificada!</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="../../../assets/_img/servicos/montagem-painel.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption custom d-none d-md-block">
-              <h5>INVERTEC ® Automação Industrial</h5>
-              <p>Conheça nossos trabalhos de RETROFITTING: organização e reutilização</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="../../../assets/_img/servicos/automacao.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption custom d-none d-md-block">
-              <h5>INVERTEC ® Automação Industrial</h5>
-              <p>Faça da sua empresa uma referência!</p>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+<!-- 1. CAROUSEL HERO -->
+<section class="hero-carousel">
+  <div class="carousel-indicators">
+    <button type="button"
+      *ngFor="let slide of slides; let i = index"
+      [class.active]="i === currentSlide"
+      (click)="goTo(i)"
+      [attr.aria-label]="'Slide ' + (i + 1)">
+    </button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item"
+      *ngFor="let slide of slides; let i = index"
+      [class.active]="i === currentSlide">
+      <img [src]="slide.img" class="hero-img" [alt]="slide.alt">
+      <div class="hero-caption">
+        <p class="hero-label">INVERTEC ® Automação Industrial</p>
+        <h2>{{ slide.title }}</h2>
+        <p class="text-normal">{{ slide.caption }}</p>
       </div>
-</section>
-
-<section class="row info-empresa d-flex justify-content-center">
-    <h2 class="text-center mb-5 texto-topico">O que podemos lhe oferecer?</h2>
-    <div class="img-info"></div>
-    <div class="texto-info">
-        <p>
-        A INVERTEC ® Automação Industrial, trabalha para melhor atender qualquer necessidade que sua empresa necessite dentro da área eletroeletrônica e automação industrial.
-        <br>
-        Trabalhamos com a mais alta tecnologia de informação e automação. Nossa equipe altamente qualificada possui o conhecimento em diversas áreas da automação industrial, por isso hoje somos uma referência no ramo.
-        <br>
-        Credibilidade e confiança em nosso trabalho nos fazem ter um relacionamento sólido e transparente com o cliente.
-      </p>
-      <button type="button" class="btn btn-info btn-custom"><a class="link" routerLink="contato">Entre em contato conosco</a></button>
     </div>
-
+  </div>
+  <button class="carousel-control-prev" type="button" (click)="prev()">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" (click)="next()">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Próximo</span>
+  </button>
 </section>
-<!--  Confira alguns serviços prestados pela INVERTEC ®. -->
 
+<!-- 2. BARRA DE CREDENCIAIS -->
+<section class="credenciais-bar">
+  <div class="container">
+    <div class="credenciais-grid">
+      <div class="credencial-item">
+        <span class="credencial-icone">📅</span>
+        <strong>Desde 2001</strong>
+        <span>Mais de 20 anos no mercado</span>
+      </div>
+      <div class="credencial-item">
+        <span class="credencial-icone">🔧</span>
+        <strong>6 Áreas de Atuação</strong>
+        <span>Soluções completas para sua indústria</span>
+      </div>
+      <div class="credencial-item">
+        <span class="credencial-icone">🗺️</span>
+        <strong>Blumenau — SC</strong>
+        <span>Atendimento em todo o estado</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. SERVIÇOS EM DESTAQUE -->
+<section class="servicos-destaque">
+  <div class="container">
+    <h2>O que fazemos</h2>
+    <p class="text-normal secao-subtitulo">
+      Atendemos indústrias de todos os portes com soluções especializadas em automação e eletroeletrônica.
+    </p>
+    <div class="destaque-grid">
+
+      <div class="destaque-card">
+        <div class="destaque-icone">⚙️</div>
+        <h3>Automação Industrial</h3>
+        <p class="text-normal">
+          CLPs (Schneider, Rockwell, Siemens, Weg), IHMs, SCADA e redes
+          industriais como Modbus, Profibus e Profinet.
+        </p>
+      </div>
+
+      <div class="destaque-card">
+        <div class="destaque-icone">🔧</div>
+        <h3>Assistência Técnica</h3>
+        <p class="text-normal">
+          Laboratório moderno para reparo de CLPs, IHMs, inversores e
+          placas dedicadas. Assistência autorizada Schneider Electric.
+        </p>
+      </div>
+
+      <div class="destaque-card">
+        <div class="destaque-icone">🔄</div>
+        <h3>Retrofitting</h3>
+        <p class="text-normal">
+          Modernização de máquinas e equipamentos com controle ultrapassado,
+          aproveitando a estrutura mecânica e reduzindo custos.
+        </p>
+      </div>
+
+    </div>
+    <div class="text-center">
+      <a class="btn-ver-todos" routerLink="/servicos">Ver todos os serviços →</a>
+    </div>
+  </div>
+</section>
+
+<!-- 4. QUEM SOMOS -->
+<section class="quem-somos">
+  <div class="container quem-somos-grid">
+    <div class="quem-somos-texto">
+      <h2>Quem somos</h2>
+      <p class="text-normal">
+        A INVERTEC surgiu em 2001 com foco em manutenção eletrônica industrial.
+        Ao longo dos anos, nos especializamos em automação eletroeletrônica para atender
+        a crescente demanda das indústrias do Vale do Itajaí.
+      </p>
+      <p class="text-normal">
+        Hoje atuamos nos segmentos metalúrgico, têxtil, plásticos, alimentício, hospitalar
+        e em parceria com fabricantes de máquinas — sempre com qualidade, agilidade e
+        compromisso com o resultado do cliente.
+      </p>
+      <a class="btn-saiba-mais" routerLink="/sobre">Conheça nossa história →</a>
+    </div>
+    <div class="quem-somos-imagem">
+      <img src="../../../assets/_img/empresa/empresa1.png" alt="INVERTEC - equipe e instalações">
+    </div>
+  </div>
+</section>
+
+<!-- 5. CTA FINAL -->
+<section class="home-cta">
+  <div class="container text-center">
+    <h2>Pronto para modernizar sua indústria?</h2>
+    <p class="text-normal">Nossa equipe está pronta para encontrar a melhor solução para o seu processo.</p>
+    <a class="btn btn-cta" routerLink="/contato">Fale conosco</a>
+  </div>
+</section>

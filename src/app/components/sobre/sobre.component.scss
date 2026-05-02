@@ -1,145 +1,134 @@
-
-h1 {
-  position: relative;
-  padding: 0;
-  margin: 0;
-  font-family: "Raleway", sans-serif;
-  font-weight: 300;
-  font-size: 40px;
-  color: #080808;
-  -webkit-transition: all 0.4s ease 0s;
-  -o-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s;
-}
-
-h1 span {
-  display: block;
-  font-size: 0.5em;
-  line-height: 1.3;
-}
-h1 em {
-  font-style: normal;
-  font-weight: 600;
-}
-
-.five h1 {
+.sobre-hero
+{
+  background: linear-gradient(135deg, var(--cor1) 0%, var(--cor2) 100%);
+  color: var(--cor7);
+  padding: 5rem 0 4rem;
   text-align: center;
-  font-size: 26px;
-  font-weight: 700; color:#202020;
-  text-transform: uppercase;
-  word-spacing: 1px; letter-spacing:2px;
-}
-.five h1 span {
-  margin-top: 40px;
-  text-transform: none;
-  font-size:.75em;
-  font-weight: normal;
-  font-style: italic; font-family: "Playfair Display","Bookman",serif;
-  color:#999; letter-spacing:-0.005em; word-spacing:1px;
-  letter-spacing:none;
-}
-.five h1:before {
-  position: absolute;
-  left: 0;
-  bottom: 38px;
-  width: 60px;
-  height: 4px;
-  content: "";
-  left: 50%;
-  margin-left: -30px;
-  background-color: #dfdfdf;
+
+  h1 { color: var(--cor7); margin-bottom: 1rem; }
+
+  .subtitulo { opacity: 0.85; font-size: 1.1rem; }
 }
 
-.three h1 {
-  font-size: 28px;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5em;
-  padding-bottom: 15px;
-  position: relative;
-}
-.three h1:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 5px;
-  width: 55px;
-  background-color: #111;
-}
-.three h1:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 2px;
-  height: 1px;
-  width: 95%;
-  max-width: 255px;
-  background-color: #333;
-}
-
-.custom-height
+.sobre-historia
 {
-  min-height: 70vh;
+  padding: 4rem 1rem;
 }
 
-#sobre-nos-container
+.historia-grid
 {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
 }
 
-.texto-sobre-nos
+.historia-texto h2
 {
-  width: 50%;
-  padding: 0 30px 0 30px;
+  color: var(--cor1);
+  margin-bottom: 1.5rem;
 }
 
-.img-sobre-nos
+.historia-texto p
 {
-  background-image: url('../../../assets/_img/empresa/empresa1.png');
-  width: 800px;
-  height: 443px;
+  color: #555;
+  margin-bottom: 1rem;
 }
 
-@media screen and (max-width: 1250px)
+.historia-imagem img
 {
-  #sobre-nos-container
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(27,54,89,0.12);
+}
+
+@media (max-width: 768px)
+{
+  .historia-grid
   {
-    display: grid;
-    align-items: center;
-    justify-content: center;
+    grid-template-columns: 1fr;
   }
-  .texto-sobre-nos
+
+  .historia-imagem { order: -1; }
+}
+
+.sobre-diferenciais
+{
+  background-color: #f0f7ff;
+  padding: 4rem 1rem;
+
+  h2
   {
-    padding: 30px;
-    width: 100%;
-  }
-  .img-sobre-nos
-  {
-    margin: 30px;
+    color: var(--cor1);
+    margin-bottom: 2rem;
+    text-align: center;
   }
 }
 
-
-@media screen and (max-width: 1000px)
+.diferenciais-grid
 {
-
-  .img-sobre-nos
-  {
-    background-image: url('../../../assets/_img/empresa/empresa3.png');
-    width: 500px;
-    height: 227px;
-  }
-
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
 
-
-@media screen and (max-width: 600px)
+@media (max-width: 768px)
 {
-  .img-sobre-nos
-  {
-      background-image: url('../../../assets/_img/empresa/empresa2.png');
-      width: 350px;
-      height: 194px;
-  }
+  .diferenciais-grid { grid-template-columns: 1fr; }
+}
+
+.diferencial-card
+{
+  background: #fff;
+  border: 1px solid #e8edf3;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.diferencial-card:hover
+{
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(27,54,89,0.12);
+}
+
+.diferencial-icone
+{
+  font-size: 2.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.diferencial-card h3
+{
+  color: var(--cor1);
+  margin: 0.5rem 0 0.75rem;
+}
+
+.diferencial-card p { color: #555; }
+
+.sobre-cta
+{
+  padding: 4rem 1rem;
+
+  h2 { color: var(--cor1); margin-bottom: 1rem; }
+  p  { color: #555; margin-bottom: 2rem; }
+}
+
+.btn-cta
+{
+  background-color: var(--cor3);
+  color: var(--cor7);
+  padding: 0.8rem 2.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.btn-cta:hover
+{
+  background-color: var(--cor1);
+  color: var(--cor7);
 }

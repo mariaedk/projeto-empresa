@@ -1,4 +1,4 @@
-.servicos-hero
+.automacao-hero
 {
   background: linear-gradient(135deg, var(--cor1) 0%, var(--cor2) 100%);
   color: var(--cor7);
@@ -9,50 +9,7 @@
   .subtitulo { opacity: 0.85; font-size: 1.1rem; }
 }
 
-/* ── TABS ──────────────────────────────────────────────── */
-
-.tab-bar
-{
-  background: #fff;
-  border-bottom: 2px solid #e8edf3;
-  padding: 0 0;
-  position: sticky;
-  top: 0;
-  z-index: 200;
-  box-shadow: 0 2px 8px rgba(27,54,89,0.08);
-
-  .container
-  {
-    display: flex;
-  }
-}
-
-.tab-btn
-{
-  flex: 1;
-  padding: 1rem 1.5rem;
-  background: none;
-  border: none;
-  border-bottom: 3px solid transparent;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #888;
-  cursor: pointer;
-  transition: color 0.2s, border-color 0.2s;
-  margin-bottom: -2px;
-
-  &:hover { color: var(--cor1); }
-
-  &.active
-  {
-    color: var(--cor1);
-    border-bottom-color: var(--cor3);
-  }
-}
-
-/* ── INTRO AUTOMAÇÃO ───────────────────────────────────── */
-
-.servico-intro
+.automacao-intro
 {
   background-color: #f0f7ff;
   padding: 3rem 1rem;
@@ -95,49 +52,11 @@
   .intro-badge { justify-content: center; }
 }
 
-/* ── BARRA DE NAVEGAÇÃO ÂNCORA ─────────────────────────── */
-
-.servicos-nav
-{
-  background-color: #edf3fa;
-  border-bottom: 1px solid #d0dff0;
-  padding: 0.75rem 0;
-
-  .container
-  {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: center;
-  }
-
-  a
-  {
-    color: var(--cor1);
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 600;
-    padding: 0.35rem 0.9rem;
-    border-radius: 20px;
-    border: 1px solid #b0c8e8;
-    transition: background 0.2s, color 0.2s, border-color 0.2s;
-    white-space: nowrap;
-    cursor: pointer;
-
-    &:hover
-    {
-      background: var(--cor1);
-      color: #fff;
-      border-color: var(--cor1);
-    }
-  }
-}
-
 /* ── SEÇÕES ALTERNADAS ─────────────────────────────────── */
 
-.servico-secao { padding: 4rem 1rem; background: #fff; }
+.automacao-secao { padding: 4rem 1rem; }
 
-.servico-secao.fundo-alt { background-color: #f8fafc; }
+.automacao-secao:nth-child(even) { background-color: #f8fafc; }
 
 .secao-grid
 {
@@ -147,7 +66,7 @@
   align-items: center;
 }
 
-.servico-secao.inversa .secao-grid
+.automacao-secao.inversa .secao-grid
 {
   direction: rtl;
 
@@ -157,7 +76,7 @@
 @media (max-width: 768px)
 {
   .secao-grid { grid-template-columns: 1fr; }
-  .servico-secao.inversa .secao-grid { direction: ltr; }
+  .automacao-secao.inversa .secao-grid { direction: ltr; }
 }
 
 .secao-numero
@@ -226,85 +145,6 @@
   box-shadow: 0 8px 24px rgba(27,54,89,0.2);
 }
 
-.imagem-grid-2
-{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
-  align-items: start;
-}
-
-.imagem-grid-3
-{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 0.75rem;
-  align-items: start;
-}
-
-@media (max-width: 480px)
-{
-  .imagem-grid-2 { grid-template-columns: 1fr; }
-  .imagem-grid-3 { grid-template-columns: 1fr 1fr; }
-}
-
-/* ── RETROFIT ──────────────────────────────────────────── */
-
-.retrofit-pares
-{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
-}
-
-.retrofit-par
-{
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-
-.retrofit-label
-{
-  font-size: 0.78rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #888;
-  text-align: center;
-  background: #f0f0f0;
-  border-radius: 4px;
-  padding: 0.2rem 0;
-
-  &.depois { color: var(--cor3); background: #e8f5e9; }
-}
-
-/* ── VENDA DE PEÇAS ────────────────────────────────────── */
-
-.secao-texto-complemento { display: flex; align-items: center; }
-
-.pecas-destaque
-{
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  width: 100%;
-}
-
-.pecas-item
-{
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  background: #f0f7ff;
-  border-left: 4px solid var(--cor3);
-  border-radius: 0 8px 8px 0;
-  padding: 1rem 1.25rem;
-
-  strong { color: var(--cor1); font-size: 0.95rem; }
-  span   { color: #666; font-size: 0.85rem; }
-}
-
 /* ── LIGHTBOX ──────────────────────────────────────────── */
 
 .lightbox-overlay
@@ -350,9 +190,30 @@
 
 .lightbox-close:hover { background: rgba(255,255,255,0.3); }
 
+.imagem-grid-2
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.imagem-grid-3
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.75rem;
+}
+
+@media (max-width: 480px)
+{
+  .imagem-grid-2 { grid-template-columns: 1fr; }
+  .imagem-grid-3 { grid-template-columns: 1fr 1fr; }
+}
+
 /* ── CTA ───────────────────────────────────────────────── */
 
-.servicos-cta
+.automacao-cta
 {
   background: linear-gradient(135deg, var(--cor1) 0%, var(--cor2) 100%);
   padding: 4rem 1rem;

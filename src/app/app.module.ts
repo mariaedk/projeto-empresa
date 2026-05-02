@@ -9,6 +9,7 @@ import { FooterComponent } from './components/common/footer/footer.component';
 import { SobreComponent } from './components/sobre/sobre.component';
 import { ContatoComponent } from './components/contato/contato.component';
 import { ServicoComponent } from './components/servico/servico.component';
+import { AutomacaoComponent } from './components/automacao/automacao.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ServicoComponent } from './components/servico/servico.component';
     FooterComponent,
     SobreComponent,
     ContatoComponent,
-    ServicoComponent
+    ServicoComponent,
+    AutomacaoComponent
   ],
   imports: [
     BrowserModule,
